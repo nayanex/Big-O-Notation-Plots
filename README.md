@@ -4,13 +4,13 @@ The purpose of this notebook is to visualize the order of growth of some functio
 
 ## Definitions
 
-We start by reminding the definitions. Consider two functions f(n)$ and g(n)$ that are defined for all positive integers and take on non-negative real values. (Some frequently used functions used in algorithm design: log(n), sqrt(n), n\*log(n), n^3, 2^n). We say that **f grows slower than g** and write f ≺ g, if f(n)/g(n) goes to 0 as n grows. We say that f grows no faster than g and write f ⪯ g, if there exists a constant c such that f(n) ≤ c · g(n) for all n.
+We start by reminding the definitions. Consider two functions f(n) and g(n) that are defined for all positive integers and take on non-negative real values. (Some frequently used functions used in algorithm design: log(n), sqrt(n), n\*log(n), n^3, 2^n). We say that **f grows slower than g** and write f ≺ g, if f(n)/g(n) goes to 0 as n grows. We say that f grows no faster than g and write f ⪯ g, if there exists a constant c such that f(n) ≤ c · g(n) for all n.
 
 Three important remarks.
 
-1. $f \prec g$ is the same as $f=o(g)$ (small-o) and $f \preceq g$ is the same as $f=O(g)$ (big-O). In this notebook, we've decided to stick to the $\preceq$ notation, since many learners find this notation more intuitive. One source of confusion is the following: many learners are confused by the statement like "$5n^2=O(n^3)$". When seeing such a statement, they claim: "But this is wrong! In fact, $5n^2=O(n^2)$!" At the same time, both these statements are true: $5n^2=O(n^3)$ and also $5n^2=O(n^2)$. They both just say that $5n^2$ grows no faster than both $n^2$ and $n^3$. In fact, $5n^2$ grows no faster than $n^2$ and grows slower than $n^3$. In $\preceq$ notation, this is expressed as follows: $5n^2 \preceq n^2$ and $5n^2 \preceq n^3$. This resembles comparing integers: if $x=2$, then both statements $x \le 2$ and $x \le 3$ are correct.
-2. Note that if $f \prec g$, then also $f \preceq g$. In plain English: if $f$ grows slower than $g$, then $f$ certainly grows no faster than $g$.
-3. Note that we need to use a fancy $\preceq$ symbol instead of the standard less-or-equal sign $\le$, since the latter one is typically used as follows: $f \le g$ if $f(n) \le g(n)$ for all $n$. Hence, for example, $5n^2 \not \le n^2$, but $5n^2 \preceq n^2$.
+1. f ≺ g is the same as f=o(g) (small-o) and f ≺ g is the same as f=O(g) (big-O). In this notebook, we've decided to stick to the ≺ notation, since many learners find this notation more intuitive. One source of confusion is the following: many learners are confused by the statement like "5n^2=O(n^3)$". When seeing such a statement, they claim: "But this is wrong! In fact, 5n^2=O(n^2)$!" At the same time, both these statements are true: $5n^2=O(n^3)$ and also 5n^2=O(n^2)$. They both just say that $5n^2$ grows no faster than both $n^2$ and $n^3$. In fact, 5n^2 grows no faster than $n^2$ and grows slower than $n^3$. In ≺ notation, this is expressed as follows: 5n^2 ≺ n^2$ and $5n^2 ≺ n^3$. This resembles comparing integers: if $x=2$, then both statements x \le 2$ and $x \le 3\$ are correct.
+2. Note that if f ≺ g, then also f ≺ g. In plain English: if $f$ grows slower than $g$, then $f$ certainly grows no faster than g.
+3. Note that we need to use a fancy ≺ symbol instead of the standard less-or-equal sign $\le$, since the latter one is typically used as follows: $f \le g if f(n) \le g(n) for all n. Hence, for example, $5n^2 \not \le n^2$, but $5n^2 ≺ n^2\$.
 
 ## Plotting: two simple examples
 
