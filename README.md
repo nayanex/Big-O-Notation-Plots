@@ -8,9 +8,9 @@ We start by reminding the definitions. Consider two functions f(n) and g(n) that
 
 Three important remarks.
 
-1. f ≺ g is the same as f=o(g) (small-o) and f ≺ g is the same as f=O(g) (big-O). In this notebook, we've decided to stick to the ≺ notation, since many learners find this notation more intuitive. One source of confusion is the following: many learners are confused by the statement like "5n^2=O(n^3)$". When seeing such a statement, they claim: "But this is wrong! In fact, 5n^2=O(n^2)$!" At the same time, both these statements are true: $5n^2=O(n^3)$ and also 5n^2=O(n^2)$. They both just say that $5n^2$ grows no faster than both $n^2$ and $n^3$. In fact, 5n^2 grows no faster than $n^2$ and grows slower than $n^3$. In ≺ notation, this is expressed as follows: 5n^2 ≺ n^2$ and $5n^2 ≺ n^3$. This resembles comparing integers: if $x=2$, then both statements x \le 2$ and $x \le 3\$ are correct.
-2. Note that if f ≺ g, then also f ≺ g. In plain English: if $f$ grows slower than $g$, then $f$ certainly grows no faster than g.
-3. Note that we need to use a fancy ≺ symbol instead of the standard less-or-equal sign $\le$, since the latter one is typically used as follows: $f \le g if f(n) \le g(n) for all n. Hence, for example, $5n^2 \not \le n^2$, but $5n^2 ≺ n^2\$.
+1. f ≺ g is the same as f=o(g) (small-o) and f ≺ g is the same as f=O(g) (big-O). In this notebook, we've decided to stick to the ≺ notation, since many learners find this notation more intuitive. One source of confusion is the following: many learners are confused by the statement like "5n^2=O(n^3)". When seeing such a statement, they claim: "But this is wrong! In fact, 5n^2=O(n^2)!" At the same time, both these statements are true: 5n^2=O(n^3) and also 5n^2=O(n^2). They both just say that 5n^2 grows no faster than both n^2 and n^3. In fact, 5n^2 grows no faster than n^2 and grows slower than n^3. In ≺ notation, this is expressed as follows: 5n^2 ≺ n^2 and 5n^2 ≺ n^3. This resembles comparing integers: if x=2, then both statements x \le 2 and x \le 3\ are correct.
+2. Note that if f ≺ g, then also f ≺ g. In plain English: if f grows slower than g, then f certainly grows no faster than g.
+3. Note that we need to use a fancy ≺ symbol instead of the standard less-or-equal sign \le, since the latter one is typically used as follows: f \le g if f(n) \le g(n) for all n. Hence, for example, 5n^2 \not \le n^2, but 5n^2 ≺ n^2\.
 
 ## Plotting: two simple examples
 
@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 ```
 
-Now, plotting a function is as easy as the following three lines of code. It shows the plot of a function $7n^2+6n+5$ in the range $1 \le n \le 100$. Note that the scale of the $y$-axis adjusts nicely.
+Now, plotting a function is as easy as the following three lines of code. It shows the plot of a function 7n^2+6n+5 in the range 1 \le n \le 100. Note that the scale of the y-axis adjusts nicely.
 
 ```python
 n = np.linspace(1, 100)
