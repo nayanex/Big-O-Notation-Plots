@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 ```
 
-Now, plotting a function is as easy as the following three lines of code. It shows the plot of a function 7n^2+6n+5 in the range 1 \le n \le 100. Note that the scale of the y-axis adjusts nicely.
+Now, plotting a function is as easy as the following three lines of code. It shows the plot of a function 7n^2+6n+5 in the range 1 ≤ n ≤ 100. Note that the scale of the y-axis adjusts nicely.
 
 ```python
 n = np.linspace(1, 100)
@@ -32,8 +32,7 @@ plt.show()
 
 ![png](output_5_0.png)
 
-Now, let us add a function $20n$ to the previous example to visualize that $20n$ grows slower than $7n^2+6n+5$.
-
+Now, let us add a function 20n to the previous example to visualize that 20n grows slower than 7n^2+6n+5$.
 ```python
 n = np.linspace(1, 100)
 plt.plot(n, 7 * n * n + 6 * n + 5, label="7n^2+6n+5")
@@ -48,7 +47,7 @@ plt.show()
 
 Before proceeding with visualizations, let's review the common rules of comparing the order of growth of functions arising frequently in algorithm analysis.
 
-1. Multiplicative constants can be omitted: $c \cdot f \preceq f$. Examples: $5n^2 \preceq n^2$, $\frac{n^2}{3} \preceq n^2$.
+1. Multiplicative constants can be omitted: c · f ⪯ f . Examples: 5n^2 ⪯ n^2, n^2/3 ⪯ n^2.
 2. Out of two polynomials, the one with larger degree grows faster: $n^a \preceq n^b$ for $0 \le a \le b$. Examples: $n \prec n^2$, $\sqrt{n} \prec n^{2/3}$, $n^2 \prec n^3$, $n^0 \prec \sqrt{n}$.
 3. Any polynomial grows slower than any exponential: $n^a \prec b^n$ for $a \ge 0, b>1$. Examples: $n^3 \prec 2^n$, $n^{10} \prec 1.1^n$.
 4. Any polylogarithm grows slower than any polynomial: $(\log n)^a \prec n^b$ for $a, b>0$. Examples: $(\log n)^3 \prec \sqrt{n}$, $n\log n \prec n^2$.
