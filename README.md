@@ -48,8 +48,8 @@ plt.show()
 Before proceeding with visualizations, let's review the common rules of comparing the order of growth of functions arising frequently in algorithm analysis.
 
 1. Multiplicative constants can be omitted: c · f ⪯ f . Examples: 5n^2 ⪯ n^2, n^2/3 ⪯ n^2.
-2. Out of two polynomials, the one with larger degree grows faster: $n^a \preceq n^b$ for $0 \le a \le b$. Examples: $n \prec n^2$, $\sqrt{n} \prec n^{2/3}$, $n^2 \prec n^3$, $n^0 \prec \sqrt{n}$.
-3. Any polynomial grows slower than any exponential: $n^a \prec b^n$ for $a \ge 0, b>1$. Examples: $n^3 \prec 2^n$, $n^{10} \prec 1.1^n$.
+2. Out of two polynomials, the one with larger degree grows faster: n^a ⪯ n^b  for 0 ≤ a ≤ b. Examples: n ≺ n^2, √n ≺ n^(2/3), n^2 ≺^n3, n^0 ≺√n.
+3. Any polynomial grows slower than any exponential: n^a ≺ b^n for a ≥ 0, b > 1. Examples: n^3 ≺ 2^n, n^10 ≺ 1.1^n.
 4. Any polylogarithm grows slower than any polynomial: $(\log n)^a \prec n^b$ for $a, b>0$. Examples: $(\log n)^3 \prec \sqrt{n}$, $n\log n \prec n^2$.
 5. Smaller terms can be ommited: if $f \prec g$, then $f+g\preceq g$. Examples: $n^2+n \preceq n^2$, $2^n+n^9 \preceq 2^n$.
 
